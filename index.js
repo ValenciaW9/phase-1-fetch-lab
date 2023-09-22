@@ -1,3 +1,12 @@
+
+function renderBooks(books) {
+  // Implement your code to render books here
+  // For example, you can loop through the books array and display their titles
+  books.forEach(book => {
+    console.log(book.title);
+  });
+}
+
 function fetchBooks() {
   return fetch('https://anapioficeandfire.com/api/books')
     .then(response => response.json())
@@ -19,3 +28,5 @@ function fetchBooks() {
       renderBooks(jsonData); // Pass the JSON data to the renderBooks() function
     });
 }
+
+fetchBooks();
